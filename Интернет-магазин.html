@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)https://d1nexj.ru/ -->
+<html lang="ru" m_init="2233643202405311209"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS SHOP</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .product {
+            background: linear-gradient(90deg, #353535, #1d1d1d);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: auto;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-content {
+            padding: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product h2 {
+            font-size: 20px;
+            margin: 5px 0;
+            color: #ffffff;
+            font-weight: bolder;
+        }
+
+        .product .price {
+            font-size: 16px;
+            color: rgb(0, 255, 0);
+            margin-bottom: 5px;
+            text-align: center;
+            font-family: 'recode';
+        }
+
+@font-face {
+    font-family: 'recode';
+    src: url(./Интернет-магазин_files/recode.otf);
+}
+        .product .desc {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            display: block;
+            background: linear-gradient(to right, #0062ff, #00bbff);
+            color: white;
+            text-align: center;
+            font-weight: bolder;
+            padding: 10px;
+            border-radius: 15px;
+            text-decoration: none;
+            margin-top: auto;
+            transition: background-color 0.2s;
+        }
+
+        .otzv {
+            background-color: #212121;
+            color: white;
+            text-align: right;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .grae {
+            background-color: #212121;
+            text-align: center;
+            padding: 10px;
+            margin-top: 1px;
+            width: 94%;
+            font-weight: bolder;
+        }
+
+        .primer {
+            background-color: #212121;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .otzv:hover {
+            background-color: #595959;
+        }
+
+        .primer:hover {
+            background-color: #595959;
+        }
+
+        .buy-button:hover {
+            background-color: #0062ff;
+        }
+
+        .details {
+            position: fixed;
+            top: -20px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .details-content {
+            background-color: #212121;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            max-height: 600px;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        .details-content img {
+            width: 200px;
+            margin-left: 50px;
+            height: auto;
+            
+            border-radius: 10px;
+        }
+
+        .details-content h2 {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        .details-content p {
+            font-size: 15px;
+            color: #c9c9c9;
+            margin: 10px 0;
+        }
+
+        .close-details {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: none;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+            color: #c9c9c9;
+        }
+
+        .logo {
+            width: 100%;
+            height: auto;
+        }
+
+        .close-details:hover {
+            color: #000;
+        }
+    </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+
+<body>
+
+    <img src="./Интернет-магазин_files/logo.jpg" class="logo">
+    <div class="grae">
+        <a href="https://t.me/studiorecode" class="otzv">ОТЗЫВЫ</a> 
+        <a href="https://t.me/studiorecode" class="primer">КАНАЛ</a>
+    </div>
+    
+
+    <div class="container">
+
+        <div class="product" onclick="showDetails(&#39;details2&#39;)">
+            <img src="./Интернет-магазин_files/2.jpg" alt="Dell XPS 13">
+            <div class="product-content">
+                <div class="product-info">
+                    <h2>ГОТОВОЕ ПРИЛОЖЕНИЕ RECODEAPP V1</h2>
+                    <p class="price">ЦЕНА: 40$</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showDetails(&#39;details1&#39;)">
+            <img src="./Интернет-магазин_files/1.jpg" alt="iPhone 13">
+            <div class="product-content">
+                <div class="product-info">
+                    <h2>ТЕЛЕГРАММ БОТ RECODEBOT V1</h2>
+                    <p class="price">ЦЕНА: 49$</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showDetails(&#39;details5&#39;)">
+            <img src="./Интернет-магазин_files/3.jpg" alt="Samsung Galaxy S21">
+            <div class="product-content">
+                <div class="product-info">
+                    <h2>Копия 1win + LuckyJet предсказатель</h2>
+                    <p class="price">ЦЕНА: 35$</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="details1" class="details" onclick="hideDetails(&#39;details1&#39;)">
+        <div class="details-content" onclick="event.stopPropagation()">
+            <button class="close-details" onclick="hideDetails(&#39;details1&#39;)">×</button>
+            <img src="./Интернет-магазин_files/1.jpg" alt="iPhone 13">
+            <h2>ТЕЛЕГРАММ БОТ RECODEBOT V1</h2>
+            <p class="price">49$</p>
+            <p>Готовый телеграмм бот с проверкой депозита и регистрации от студии RECODE!</p>
+            <p>Имеются 4 игры: Bombucks, Dice, Новые Mines, LuckyJet</p>
+            <p>Пример - @RSTUDI_BOT</p>
+            <a href="https://t.me/solo1w" class="buy-button">Купить</a>
+        </div>
+    </div>
+
+    <div id="details2" class="details" onclick="hideDetails(&#39;details2&#39;)">
+        <div class="details-content" onclick="event.stopPropagation()">
+
+            <button class="close-details" onclick="hideDetails(&#39;details2&#39;)">×</button>
+            <img src="./Интернет-магазин_files/2.jpg" alt="Samsung Galaxy S21">
+            <h2>ГОТОВОЕ ПРИЛОЖЕНИЕ RECODEAPP V1</h2>
+            <p class="price">40$</p>
+            <p>Готовое web приложение от студии RECODE!</p>
+            <p>Имеются 4 игры: Bombucks, Dice, Новые Mines, LuckyJet</p>
+            <p>Как выглядит веб приложение вы можете посмотреть в нашем телеграмм канале!</p>
+            <a href="https://t.me/solo1w" class="buy-button">Купить</a>
+        </div>
+    </div>
+
+
+    <div id="details5" class="details" onclick="hideDetails(&#39;details5&#39;)">
+        <div class="details-content" onclick="event.stopPropagation()">
+            <button class="close-details" onclick="hideDetails(&#39;details5&#39;)">×</button>
+            <img src="./Интернет-магазин_files/3.jpg" alt="Samsung Galaxy S21">
+            <h2>Копия 1win + LuckyJet предсказатель</h2>
+            <p class="price">35$</p>
+            <p>После покупки вам выдаётся ключ от копии сайта 1win с которым синхронизирован предсказатель, подробнее можно узнат ьв нашем канале!</p>
+            <p>Предсказатель LuckyJet - это отдельное web приложение!</p>
+            <a href="https://t.me/solo1w" class="buy-button">Купить</a>
+        </div>
+    </div>
+
+    <script>
+
+        function showDetails(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+
+        function hideDetails(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+
+
+
+<deepl-input-controller><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div dir="ltr" style="visibility: initial !important;"><div class="dl-input-translation-container svelte-95aucy"><div></div></div></div></template></deepl-input-controller></body></html>
